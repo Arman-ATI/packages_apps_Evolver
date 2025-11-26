@@ -11,13 +11,13 @@
 
     <!-- Categories -->
     <string name="themes_title">Themes</string>
-    <string name="themes_summary">Monet engine, fonts, icons, animations</string>
+    <string name="themes_summary">Lock sounds, fonts, animations</string>
     <string name="lock_screen_title">Lock screen</string>
     <string name="lock_screen_summary">Interface, fingerprint</string>
     <string name="status_bar_title">Status bar</string>
-    <string name="status_bar_summary">Gestures, icons, logo</string>
+    <string name="status_bar_summary">Gestures, icons</string>
     <string name="quick_settings_title">Quick settings</string>
-    <string name="quick_settings_summary">Interface, brightness slider, layout</string>
+    <string name="quick_settings_summary">Interface, miscellaneous</string>
     <string name="notifications_title">Notifications</string>
     <string name="notifications_summary">Heads up, interface, sounds</string>
     <string name="power_menu_title">Power menu</string>

@@ -9,71 +9,16 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/themes_title">
 
-    <PreferenceCategory
+    <!--<PreferenceCategory
         android:key="themes_monet_category"
         android:title="@string/themes_monet_category">
 
-        <!-- Monet engine -->
         <Preference
             android:key="monet_engine"
             android:title="@string/themes_monet_title"
             android:summary="@string/themes_monet_summary"
             android:fragment="org.evolution.settings.fragments.themes.MonetSettings" />
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="themes_general_category"
-        android:title="@string/themes_general_category">
-
-        <!-- Wallpaper Settings -->
-        <!--<Preference
-            android:key="wallpaper_settings"
-            android:title="@string/wallpaper_settings_title"
-            android:summary="@string/wallpaper_settings_summary"
-            android:fragment="org.evolution.settings.fragments.themes.Wallpaper" />
-
-        <Preference
-            android:key="android.theme.customization.brightness_slider"
-            android:title="@string/themes_brightness_slider_title"
-            android:summary="@string/themes_brightness_slider_summary"
-            android:fragment="org.evolution.settings.fragments.themes.BrightnessSlider" />-->
-
-        <!-- Notification styles -->
-        <org.evolution.settings.preferences.SystemSettingListPreference
-            android:key="notification_style"
-            android:title="@string/notif_style_title"
-            android:entries="@array/notif_style_entries"
-            android:entryValues="@array/notif_style_values"
-            android:summary="%s"
-            android:defaultValue="0" />
-
-        <!-- Power menu styles -->
-        <org.evolution.settings.preferences.SystemSettingListPreference
-            android:key="powermenu_style"
-            android:title="@string/powermenu_style_title"
-            android:entries="@array/powermenu_style_entries"
-            android:entryValues="@array/powermenu_style_values"
-            android:summary="%s"
-            android:defaultValue="0" />
-
-        <!-- Progress bar styles -->
-        <org.evolution.settings.preferences.SystemSettingListPreference
-            android:key="progress_bar_style"
-            android:title="@string/progress_bar_style_title"
-            android:entries="@array/progress_bar_style_entries"
-            android:entryValues="@array/progress_bar_style_values"
-            android:summary="%s"
-            android:defaultValue="0" />
-
-        <!-- Volume Styles -->
-        <!--<org.evolution.settings.preferences.SystemSettingListPreference
-            android:key="custom_volume_styles"
-            android:title="@string/volume_style_title"
-            android:entries="@array/volume_styles_entries"
-            android:entryValues="@array/volume_styles_values"
-            android:summary="%s"
-            android:defaultValue="0" />-->
-    </PreferenceCategory>
+    </PreferenceCategory>-->
 
     <PreferenceCategory
         android:key="themes_audio_category"
@@ -112,12 +57,6 @@
         android:key="themes_launcher_category"
         android:title="@string/themes_launcher_category">
 
-        <!--<org.evolution.settings.preferences.OverlaySwitchPreference
-            android:key="com.google.android.apps.nexuslauncher.blur.overlay"
-            android:title="@string/themes_launcher_background_blur_title"
-            android:summary="@string/themes_launcher_background_blur_summary"
-            android:defaultValue="true" />-->
-
         <org.evolution.settings.preferences.OverlaySwitchPreference
             android:key="com.google.android.apps.nexuslauncher.icons.overlay"
             android:title="@string/themes_launcher_more_themed_icons_title"
@@ -128,34 +67,6 @@
     <PreferenceCategory
         android:key="themes_icons_category"
         android:title="@string/themes_icons_category">
-
-        <!-- System icons -->
-        <Preference
-            android:key="android.theme.customization.icon_pack"
-            android:title="@string/themes_system_icons_title"
-            android:summary="@string/themes_system_icons_summary"
-            android:fragment="org.evolution.settings.fragments.themes.SystemIcons"/>
-
-        <!-- Icon shape -->
-        <Preference
-            android:key="android.theme.customization.adaptive_icon_shape"
-            android:title="@string/themes_icon_shape_title"
-            android:summary="@string/themes_icon_shape_summary"
-            android:fragment="org.evolution.settings.fragments.themes.IconShapes"/>
-
-        <!-- Signal icon -->
-        <Preference
-            android:key="android.theme.customization.signal_icon"
-            android:title="@string/themes_signal_icon_title"
-            android:summary="@string/themes_signal_icon_summary"
-            android:fragment="org.evolution.settings.fragments.themes.SignalIcons"/>
-
-        <!-- Wifi icon -->
-        <Preference
-            android:key="android.theme.customization.wifi_icon"
-            android:title="@string/themes_wifi_icon_title"
-            android:summary="@string/themes_wifi_icon_summary"
-            android:fragment="org.evolution.settings.fragments.themes.WifiIcons"/>
 
         <!-- Navigation bar icons -->
         <Preference
@@ -184,18 +95,18 @@
             android:fragment="org.evolution.settings.fragments.themes.BootAnimation" />
 
         <!-- Charging animation -->
-        <org.evolution.settings.preferences.SystemSettingSwitchPreference
+        <!--<org.evolution.settings.preferences.SystemSettingSwitchPreference
             android:key="charging_animation"
             android:title="@string/themes_charging_animation_title"
             android:summary="@string/themes_charging_animation_summary"
-            android:defaultValue="true" />
+            android:defaultValue="true" />-->
 
         <!-- Dynamic charging animation -->
-        <org.evolution.settings.preferences.SystemSettingSwitchPreference
+        <!--<org.evolution.settings.preferences.SystemSettingSwitchPreference
             android:key="wireless_charging_dynamic_color"
             android:title="@string/wireless_charging_dynamic_color_title"
             android:summary="@string/wireless_charging_dynamic_color_summary"
-            android:defaultValue="true" />
+            android:defaultValue="true" />-->
 
         <!-- Screen Off animation -->
         <org.evolution.settings.preferences.SystemSettingListPreference
