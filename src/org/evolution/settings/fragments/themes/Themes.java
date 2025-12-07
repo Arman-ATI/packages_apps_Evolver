@@ -30,6 +30,7 @@ import java.util.List;
 
 import org.evolution.settings.preferences.GlobalSettingListPreference;
 import org.evolution.settings.preferences.SystemSettingListPreference;
+import org.evolution.settings.utils.DeviceUtils;
 import org.evolution.settings.utils.SystemUtils;
 
 @SearchIndexable
@@ -41,6 +42,7 @@ public class Themes extends SettingsPreferenceFragment implements
     private static final String KEY_LOCK_SOUND = "lock_sound";
     private static final String KEY_UNLOCK_SOUND = "unlock_sound";
     private static final String KEY_ICONS_CATEGORY = "themes_icons_category";
+    private static final String KEY_SIGNAL_ICON = "android.theme.customization.signal_icon";
     private static final String KEY_UDFPS_ICON = "udfps_icon";
     private static final String KEY_ANIMATIONS_CATEGORY = "themes_animations_category";
     private static final String KEY_UDFPS_ANIMATION = "udfps_animation";
@@ -50,6 +52,7 @@ public class Themes extends SettingsPreferenceFragment implements
     private GlobalSettingListPreference mUnlockSound;
     private PreferenceCategory mLauncherCategory;
     private PreferenceCategory mIconsCategory;
+    private Preference mSignalIcon;
     private Preference mUdfpsIcon;
     private PreferenceCategory mAnimationsCategory;
     private Preference mUdfpsAnimation;
@@ -72,9 +75,14 @@ public class Themes extends SettingsPreferenceFragment implements
         mUnlockSound.setOnPreferenceChangeListener(this);
         mLauncherCategory = (PreferenceCategory) findPreference(KEY_LAUNCHER_CATEGORY);
         mIconsCategory = (PreferenceCategory) findPreference(KEY_ICONS_CATEGORY);
+        mSignalIcon = (Preference) findPreference(KEY_SIGNAL_ICON);
         mUdfpsIcon = (Preference) findPreference(KEY_UDFPS_ICON);
         mAnimationsCategory = (PreferenceCategory) findPreference(KEY_ANIMATIONS_CATEGORY);
         mUdfpsAnimation = (Preference) findPreference(KEY_UDFPS_ANIMATION);
+
+        if (!DeviceUtils.deviceSupportsMobileData(context)) {
+            mIconsCategory.removePreference(mSignalIcon);
+        }
 
         FingerprintManager fingerprintManager = (FingerprintManager)
                 getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
@@ -132,6 +140,10 @@ public class Themes extends SettingsPreferenceFragment implements
 
                 FingerprintManager fingerprintManager = (FingerprintManager)
                         context.getSystemService(Context.FINGERPRINT_SERVICE);
+
+                if (!DeviceUtils.deviceSupportsMobileData(context)) {
+                    keys.add(KEY_SIGNAL_ICON);
+                }
 
                 if (!Utils.isPackageInstalled(context, "com.google.android.apps.nexuslauncher")) {
                     keys.add(KEY_LAUNCHER_CATEGORY);
